@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: mirhussainypipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mirhussainypipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: mirhussainypipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: mirhussainypipelinesjavascriptdocker 
+          image: mhmycontainerregistry.azurecr.io/mirhussainypipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
